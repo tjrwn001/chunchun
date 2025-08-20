@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join Us | The Ye Group @ NTU</title>
+  <link rel="stylesheet" href="Chunchun.css"/>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="pi.html">PI</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a href="join.html" aria-current="page">Join us!</a></li>
+        </ul>
+      </nav>
+      <div class="logo">The Ye Group @ NTU</div>
+    </div>
+  </header>
+
+  <!-- Join Us Form -->
+  <main>
+    <section class="application-form">
+      <h2>Join Our Group</h2>
+      <p>We welcome motivated students and researchers to apply.</p>
+  
+      <form id="applicationForm" enctype="multipart/form-data">
+        <label for="fullName">Full Name *</label>
+        <input type="text" id="fullName" name="fullName" required />
+      
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required />
+      
+        <label for="cv">Upload CV *</label>
+        <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required />
+      
+        <label for="coverLetter">Upload Cover Letter *</label>
+        <input type="file" id="coverLetter" name="coverLetter" accept=".pdf,.doc,.docx" />
+      
+        <label for="pubs">Upload Publication List</label>
+        <input type="file" id="pubs" name="pubs" accept=".pdf,.doc,.docx" />
+      
+        <button type="submit">Submit Application</button>
+<p id="uploadNotice" style="display:none; color: #555; margin-top: 10px;">
+  Uploading may take a few seconds. Please wait until you see a confirmation message.
+</p>
+
+      </form>
+      
+  
+      <div id="thankYouMessage" style="display: none; text-align: center; margin-top: 40px;">
+        <h3>Thank you for applying!</h3>
+        <p>We’ll review your application and get back to you soon.</p>
+        <button onclick="goBack()">Go Back</button>
+      </div>
+    </section>
+  </main>
+  
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="copyright">© 2025 The Ye Group</div>
+    </div>
+  </footer>
+
+  <script src="join.js"></script>
+</body>
+</html>
