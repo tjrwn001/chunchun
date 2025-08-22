@@ -25,45 +25,189 @@
     </div>
   </header>
 
-  <!-- Join Us Form -->
-  <main>
-    <section class="application-form">
-      <h2>Join Our Group</h2>
-      <p>We welcome motivated students and researchers to apply.</p>
-  
+  <!-- Hero -->
+  <section class="join-hero">
+    <h1>Join us!</h1>
+    <div class="join-intro">
+      <p>
+        We welcome creative and motivated individuals (PhD students &amp; Postdocs).
+        Review the requirements below, then apply with a single PDF via the form.
+      </p>
+    </div>
+
+     <!-- NEW: hero image -->
+  <img src="NTU building.png" alt="NTU campus" class="join-hero-img">
+</section>
+  </section>
+
+  <!-- Tabs: PhD / Postdoc -->
+  <section class="content-section">
+    <div class="positions-tabs">
+      <div class="tabs" role="tablist" aria-label="Position type">
+        <button class="tab active" role="tab" aria-selected="true" aria-controls="phd-panel" id="phd-tab">PhD Opportunities</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="postdoc-panel" id="postdoc-tab">Postdoctoral Research Fellow</button>
+      </div>
+
+      <!-- PhD panel -->
+      <div class="tab-panel active" role="tabpanel" id="phd-panel" aria-labelledby="phd-tab">
+        <h2>PhD Opportunities</h2>
+
+        <h3>Qualifications</h3>
+        <ul>
+          <li>A strong Bachelor’s (Honours) degree in Chemistry, Materials Science, Chemical Engineering, or a related field</li>
+          <li>Proficiency in written and spoken English</li>
+          <li>Valid English test scores (non-native speakers):
+            TOEFL 600 (paper) / 100 (iBT); IELTS 6.5 (Academic)</li>
+          <li>GRE (within 5 years): Verbal + Quantitative ≥ 319 and Analytical Writing ≥ 3.5</li>
+        </ul>
+
+        <h3>Application Period (Two intakes each year)</h3>
+        <ul>
+          <li><strong>August Intake:</strong> 1 October – 31 January</li>
+          <li><strong>January Intake:</strong> 1 June – 31 July</li>
+        </ul>
+
+        <h3>Research Scholarships</h3>
+        <p><strong>Singapore Citizens &amp; Permanent Residents</strong></p>
+        <ul>
+          <li>Nanyang President's Graduate Scholarship</li>
+          <li>NTU Research Scholarship</li>
+        </ul>
+        <p><strong>International Applicants</strong></p>
+        <ul>
+          <li>Nanyang President's Graduate Scholarship</li>
+          <li>NTU Research Scholarship</li>
+          <li>Singapore International Graduate Award (SINGA)</li>
+        </ul>
+
+        <p>Applicants with strong backgrounds and/or relevant publications are encouraged to apply. Competitive full scholarships are available for outstanding candidates.</p>
+
+        <h3>Submit as a single PDF</h3>
+        <ul>
+          <li>Cover letter describing research interests and career plans</li>
+          <li>CV with full academic record and publications</li>
+          <li>Names and contact information of 2–3 referees</li>
+        </ul>
+
+        <p><strong>Email (alternative submission):</strong> <a href="mailto:yechunchun1@gmail.com">yechunchun1@gmail.com</a><br>
+        <em>Subject:</em> University + Major + Name + PhD</p>
+
+        <button class="apply-btn" data-apply>Apply now</button>
+      </div>
+
+      <!-- Postdoc panel -->
+      <div class="tab-panel" role="tabpanel" id="postdoc-panel" aria-labelledby="postdoc-tab" hidden>
+        <h2>Postdoctoral Research Fellow</h2>
+
+        <h3>Key Responsibilities</h3>
+        <ul>
+          <li>Conduct independent research on materials design and membranes for electrochemical or separation applications</li>
+          <li>Develop and optimise experimental methods and apparatus</li>
+          <li>Publish in high-impact journals and present at international conferences</li>
+          <li>Collaborate with academic and industrial partners worldwide</li>
+          <li>Assist in supervising undergraduate and postgraduate students</li>
+          <li>Contribute to the preparation of research proposals</li>
+        </ul>
+
+        <h3>Qualifications</h3>
+        <ul>
+          <li>PhD in Chemistry, Materials Science, Chemical Engineering, or a closely related field</li>
+          <li>Strong background in one or more of: porous materials (e.g., PIMs, HCPs), membrane technologies, electrochemical energy systems (e.g., flow batteries), separation/purification processes</li>
+          <li>Demonstrated research excellence (publications or a successful PhD)</li>
+          <li>Proficiency in written and spoken English</li>
+        </ul>
+
+        <h3>Submit as a single PDF</h3>
+        <ul>
+          <li>Cover letter outlining research interests and career plans</li>
+          <li>Full CV (complete publications; include selected representative works)</li>
+          <li>Names and contact details of 2–3 referees</li>
+        </ul>
+
+        <p><strong>Email (alternative submission):</strong> <a href="mailto:yechunchun1@gmail.com">yechunchun1@gmail.com</a><br>
+        <em>Subject:</em> University + Major + Name + Postdoc</p>
+
+        <button class="apply-btn" data-apply>Apply now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Form -->
+  <main class="content-section">
+    <section class="application-form" id="applicationArea">
+      <h2>Application Form</h2>
+      <p>Upload a single PDF (preferred) or individual files below.</p>
+
       <form id="applicationForm" enctype="multipart/form-data">
+        <label for="position">Applying for *</label>
+        <select id="position" name="position" required>
+          <option value="PhD">PhD</option>
+          <option value="Postdoc">Postdoc</option>
+        </select>
+
         <label for="fullName">Full Name *</label>
         <input type="text" id="fullName" name="fullName" required />
-      
+
         <label for="email">Email Address *</label>
         <input type="email" id="email" name="email" required />
-      
-        <label for="cv">Upload CV *</label>
-        <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required />
-      
-        <label for="coverLetter">Upload Cover Letter *</label>
-        <input type="file" id="coverLetter" name="coverLetter" accept=".pdf,.doc,.docx" />
-      
-        <label for="pubs">Upload Publication List</label>
-        <input type="file" id="pubs" name="pubs" accept=".pdf,.doc,.docx" />
-      
-        <button type="submit">Submit Application</button>
-<p id="uploadNotice" style="display:none; color: #555; margin-top: 10px;">
-  Uploading may take a few seconds. Please wait until you see a confirmation message.
-</p>
 
+        <label for="singlePdf">Single PDF (preferred)</label>
+        <input type="file" id="singlePdf" name="singlePdf" accept=".pdf" />
+
+        <div class="form-divider"><span>or upload separately</span></div>
+
+        <label for="cv">CV *</label>
+        <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required />
+
+        <label for="coverLetter">Cover Letter</label>
+        <input type="file" id="coverLetter" name="coverLetter" accept=".pdf,.doc,.docx" />
+
+        <label for="pubs">Publication List</label>
+        <input type="file" id="pubs" name="pubs" accept=".pdf,.doc,.docx" />
+
+        <button type="submit">Submit Application</button>
+
+        <p id="uploadNotice" style="display:none; color:#555; margin-top:10px;">
+          Uploading may take a few seconds. Please wait until you see a confirmation message.
+        </p>
       </form>
-      
-  
-      <div id="thankYouMessage" style="display: none; text-align: center; margin-top: 40px;">
+
+      <div id="thankYouMessage" style="display:none; text-align:center; margin-top:40px;">
         <h3>Thank you for applying!</h3>
         <p>We’ll review your application and get back to you soon.</p>
-        <button onclick="goBack()">Go Back</button>
+        <button type="button" onclick="location.reload()">Submit another application</button>
       </div>
     </section>
-  </main>
-  
 
+    <section class="content-section">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>
+              School of Civil and Environmental Engineering<br>
+              Nanyang Technological University<br>
+              N1-01a-29<br>
+              50 Nanyang Avenue<br>
+              Singapore 639798
+            </p>
+            <p>Email: <a href="mailto:yechunchun1@gmail.com">yechunchun1@gmail.com</a></p>
+          </div>
+      
+          <div class="map-embed" aria-label="Map to Nanyang Technological University">
+            <iframe
+              title="Nanyang Technological University map"
+              width="100%" height="360" style="border:0"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Nanyang+Technological+University,+Singapore&output=embed">
+            </iframe>
+          </div>
+        </div>
+      </section>
+
+
+  </main>
+
+  <!-- Footer -->
   <footer class="footer">
     <div class="footer-container">
       <div class="copyright">© 2025 The Ye Group</div>
